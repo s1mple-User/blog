@@ -59,7 +59,7 @@ const sendDate = async (
 
 
   return (
-    <div className="flex items-center justify-center min-h-screen ml-[400px]">
+    <div className="flex items-center  min-h-screen ml-[740px]">
       <Card className="w-[400px]">
         <CardHeader>
           <h1 className="text-2xl font-creteRound text m-0 p-0">Login</h1>

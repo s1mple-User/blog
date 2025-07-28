@@ -22,18 +22,18 @@ function MyBlogs() {
 
   return (
 <div className="mt-56 max-md:mt-32 max-sm:mt-24 px-4 sm:px-6 md:px-12">
-  <h1 className="text-3xl font-creteRound max-sm:text-2xl max-[400px]:text-xl">
+  <h1 className="text-3xl font-creteRound max-sm:text-2xl text-center">
     Your Blogs
   </h1>
 
-  <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-x-6 gap-y-24 mt-24 max-sm:mt-12">
+  <div className="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-x-6 gap-y-24 mt-24 max-sm:mt-12">
     <AnimatePresence>
       {blog_profile && blog_profile.length > 0 ? (
         blog_profile.map((blog: TypeBlog) => (
           <ProfileBlogCard key={blog.id} {...blog} isVertical />
         ))
       ) : blog_profile ? (
-        <h1 className="text-3xl font-bold text-red-500 animate-pulse max-sm:text-2xl text-center">
+        <h1 className="text-3xl font-bold mb-96 text-red-500 animate-pulse max-sm:text-2xl text-center">
           You have no blogs
         </h1>
       ) : (

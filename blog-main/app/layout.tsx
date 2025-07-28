@@ -49,29 +49,32 @@ export const metadata: Metadata = {
 function RootLayout({ children }: ChildProps) {
 	return (
 		<html lang='en' suppressHydrationWarning>
+			
 			<body
-				className={`${creteRound.variable} ${workSans.variable} overflow-x-hidden`}
+				className={`
+					${creteRound.variable}
+					${workSans.variable}
+					w-full h-full
+					overflow-x-hidden
+				`}
 			>
-				  <SidebarProvider defaultOpen={false}>
-				<ThemeProvider
-					attribute='class'
-					defaultTheme='light'
-					enableSystem
-					disableTransitionOnChange
-					storageKey='blog-theme'
-				>
-					<NextTopLoader  showSpinner={false}/>
-					   <ReduxProviderClient>
-						<StateProvider>
-							{children}
-						</StateProvider>
-					</ReduxProviderClient>
-					<Toaster position='top-center' />
-				</ThemeProvider>
-				</SidebarProvider>
+					<ThemeProvider
+						attribute='class'
+						defaultTheme='light'
+						enableSystem
+						disableTransitionOnChange
+						storageKey='blog-theme'
+					>
+						<NextTopLoader showSpinner={false} />
+						<ReduxProviderClient>
+							<StateProvider>{children}</StateProvider>
+						</ReduxProviderClient>
+						<Toaster position='top-center' />
+					</ThemeProvider>
 			</body>
 		</html>
 	)
 }
+
 
 export default RootLayout

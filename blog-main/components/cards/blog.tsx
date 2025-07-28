@@ -1,67 +1,56 @@
 import { cn, getReadingTime } from '@/lib/utils'
 import { IBlog } from '@/types'
 import { format } from 'date-fns'
-import { CalendarDays, Clock, Dot, Layers2, Minus, Tag } from 'lucide-react'
+import { CalendarDays, Dot } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Badge } from '../ui/badge'
-import { API_URL } from '@/config/api.config'
+import { Button } from '../ui/button'
 
 interface Props extends IBlog {
 	isVertical?: boolean
 }
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
+//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
 
-function BlogCard(blog:any) {
+
+function BlogCard(blog: Props) {
 	return (
-		<div
-			className={cn(
-				'grid gap-4 group',
-				blog.isVertical ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2'
-			)}
-		>
+		<div className="group  rounded-xl  overflow-hidden hover:shadow-lg transition-shadow duration-300 shadow-gray-400 shadow-lg">
 			<Link href={`/blogs/${blog.slug}`}>
-				<div className='relative bg-secondary rounded-lg'>
+				<div className="relative w-96 h-64 md:h-72 overflow-hidden">
 					<Image
-						width={650}
-						height={335}
-						src={`${blog.image}`}
+						src={blog.image}
 						alt={blog.title}
-				        className='px-2 md:px-7 rounded-lg hover:rounded-lg group-hover:-translate-y-7 w-[450px] h-[300px] ml-12
-						 -translate-y-6 transition-all object-cover grayscale group-hover:grayscale-0
-						  max-md:-translate-y-2 max-md:group-hover:-translate-y-3'
+						fill
+						className="object-cover transition-transform duration-300 group-hover:scale-105"
 					/>
 				</div>
 			</Link>
-			<div className='flex flex-col space-y-4'>
-				<Link href={`/blogs/${blog.slug}`} className='flex flex-col space-y-4'>
-					<div className='flex items-center gap-4'>
-						<div className='flex items-center gap-2'>
-							<CalendarDays className='w-5 h-5' />
-							<p>{blog.createdAt}</p>
-						</div>
-					</div>
 
-					<h2 className='text-3xl max-md:text-2xl font-creteRound group-hover:text-blue-500 transition-colors'>
-						{blog.title}
+			<div className="p-5 space-y-3">
+				<Link href={`/blogs/${blog.slug}`}>
+					<h2 className="text-2xl font-creteRound transition-colors">
+					    Lorem ipsum dolor sit amet consectetur adipisicing elit
 					</h2>
-					<p className='text-muted-foreground line-clamp-3'>
-						{blog.description}
-					</p>
 				</Link>
-				<div className='flex items-center gap-4'>
-					<div className='flex items-center gap-2'>
-						<Image
-							src={blog.author.image}
-							alt='author'
-							width={70}
-							height={70}
-							className='object-cover rounded-2xl'
-						/>
-						<p>by {blog.author.name}</p>
-					</div>
-					<Dot />
 
-				</div>
+				<p className="text-muted-foreground text-sm line-clamp-3">
+					temporibus possimus magnam, debitis alias corrupti? Expedita quas quae quasi at nemo necessitatibus ratione similique.
+				</p>
+				<Button variant={"ghost"} >Batafsil..</Button>
 			</div>
 		</div>
 	)

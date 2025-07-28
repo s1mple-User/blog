@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import GlobalSearch from './global-search'
-import { SidebarTrigger, useSidebar } from '@/components/ui/sidebar'
+import { SidebarTrigger } from '@/components/ui/sidebar'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { useTheme } from 'next-themes'
@@ -18,13 +18,10 @@ import { API_URL } from '@/config/api.config'
 
 
 function Navbar() {
-	const {open,setOpen} = useSidebar()
 	const {tokens,user}= useTypedSelector(state => state.user)
 	const pathname = usePathname()
 	
-	const holdToggle = () =>{
-		setOpen(!open)
-	}
+	
 
 	let urlImage = user?.image
 
@@ -51,7 +48,7 @@ function Navbar() {
 				<div className='flex items-center gap-5'>
 					<GlobalSearch />
 					{user ? (	
-						<Avatar onClick={holdToggle}>
+						<Avatar >
 						    <Image
                            alt="User avatar"
                            src={user ? `${API_URL}${urlImage}`: "https://github.com/shadcn.png"} 

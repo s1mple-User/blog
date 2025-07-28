@@ -81,7 +81,7 @@ function RegisterPage() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen ml-[400px]">
+    <div className="flex items-center justify-center min-h-screen">
       <Card className="w-[600px]">
         <CardHeader>
           <h1 className="text-2xl font-creteRound">Register</h1>

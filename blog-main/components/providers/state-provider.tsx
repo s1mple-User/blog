@@ -40,20 +40,6 @@ const StateProvider = ({ children }: StateProviderProps) => {
     tryLoadUser()
   }, [dispatch,blog,user,access])
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const refresh = getRefresh()
-
-      if (refresh) {
-        dispatch(upDateToken(refresh))
-          .unwrap()
-          .then(() => console.log("Access токен обновлен "))
-          .catch(() => console.warn("Ошибка обновления токена"))
-      }
-    }, 1000 * 60 * 13)
-
-    return () => clearInterval(intervalId)
-  }, [dispatch, upDateToken])
 
   return <>{children}</>
 }
