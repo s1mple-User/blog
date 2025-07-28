@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-	title: 'Contact us',
+	title: 'Связаться с нами',
 }
 
 function ContactPage() {
@@ -12,7 +12,7 @@ function ContactPage() {
 		<div className='max-w-6xl mx-auto'>
 			<div className='relative min-h-[40vh] flex items-center justify-end flex-col'>
 				<h2 className='text-center text-4xl section-title font-creteRound mt-2'>
-					<span>Contact</span>
+					<span>Контакты</span>
 				</h2>
 
 				<div className='flex gap-1 items-center mt-4'>
@@ -21,19 +21,18 @@ function ContactPage() {
 						href={'/'}
 						className='opacity-90 hover:underline hover:opacity-100'
 					>
-						Home
+						Главная
 					</Link>
 					<Dot />
-					<p className='text-muted-foreground'>Contact</p>
+					<p className='text-muted-foreground'>Контакты</p>
 				</div>
 			</div>
 
 			<div className='grid grid-cols-2 max-md:grid-cols-1 gap-4 mt-6'>
 				<div className='flex flex-col'>
-					<h1 className='text-4xl font-creteRound'>Contact Sammi</h1>
+					<h1 className='text-4xl font-creteRound'>Связаться с нами</h1>
 					<p className='mt-2 text-muted-foreground'>
-						I am here to help and answer any question you might have. I look
-						forward to hearing from you
+						Я здесь, чтобы помочь и ответить на любые ваши вопросы. С нетерпением жду вашего сообщения.
 					</p>
 
 					<div className='mt-12 flex items-center gap-3'>
@@ -47,7 +46,7 @@ function ContactPage() {
 				</div>
 
 				<div>
-					<h1 className='text-4xl font-creteRound mb-2'>Contact form</h1>
+					<h1 className='text-4xl font-creteRound mb-2'>Форма обратной связи</h1>
 					<ContactForm />
 				</div>
 			</div>

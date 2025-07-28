@@ -9,21 +9,6 @@ import { Button } from '../ui/button'
 interface Props extends IBlog {
 	isVertical?: boolean
 }
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
-//НУЖНО ПОСТАВИТЬ ОГРАНИЧЕНИЕ НА ТЕКСТ
 
 
 function BlogCard(blog: Props) {
@@ -43,14 +28,16 @@ function BlogCard(blog: Props) {
 			<div className="p-5 space-y-3">
 				<Link href={`/blogs/${blog.slug}`}>
 					<h2 className="text-2xl font-creteRound transition-colors">
-					    Lorem ipsum dolor sit amet consectetur adipisicing elit
+					    {blog.title}
 					</h2>
 				</Link>
 
 				<p className="text-muted-foreground text-sm line-clamp-3">
-					temporibus possimus magnam, debitis alias corrupti? Expedita quas quae quasi at nemo necessitatibus ratione similique.
+					{blog.description}
 				</p>
-				<Button variant={"ghost"} >Batafsil..</Button>
+				<Link href={`/blogs/${blog.slug}`}>
+				<Button className='mt-6' variant={"ghost"} >More..</Button>
+				</Link>
 			</div>
 		</div>
 	)
