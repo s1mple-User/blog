@@ -29,7 +29,7 @@ function Navbar() {
 	<div className="h-12 sm:h-16 md:h-[10vh] w-full fixed inset-x-0 top-0 z-40 bg-background/80 backdrop-blur-sm border-b px-4">
 			<div className='container max-w-6xl mx-auto h-[10vh] w-full  flex items-center justify-between'>
 				<Link href={'/'}>
-					<h1 className='text-4xl font-creteRound'>Sammi</h1>
+					<h1 className='text-4xl font-creteRound'>BLOG</h1>
 				</Link>
 				<div className='gap-2 hidden md:flex'>
 					{navLinks.map(nav => (
